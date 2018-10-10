@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#drum-machine {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+}
+#display {
+  height: 5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pads {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.drum-pad {
+  flex-basis: 28%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: lightgrey;
+}
+.drum-pad::after {
+  /* a hack to force the pads to be responsive squares;
+   the margin-bottom is calculated relaive to the elements width*/
+  padding-bottom: 100%;
+  content: "";
+  display: block;
+}
+.drum-pad.active {
+  background: #f54a8475;
+}
